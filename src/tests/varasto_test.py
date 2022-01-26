@@ -60,6 +60,7 @@ class TestVarasto(unittest.TestCase):
 		self.varasto.lisaa_varastoon(7)
 		self.varasto.ota_varastosta(10)
 		
+		# varaston saldon pitäisi olla 0
 		self.assertAlmostEqual(self.varasto.saldo, 0)
 		
 	def test_negatiivisen_maaran_lisays_ei_muuta_saldoa(self):
